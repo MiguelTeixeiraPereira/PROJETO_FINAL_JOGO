@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     public Animator anim;
     private Rigidbody2D rigd;
     public float speed;
-    public float jumpForce = 5f;
-    private bool isground;
+    public float jumpForce = 5;
+    public bool isground;
 
   
     void Start()
@@ -46,14 +46,16 @@ public class Player : MonoBehaviour
             anim.SetInteger("transitions", 0);
         }
     }
+
+   
     void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isground == true)
         {
-            rigd.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            anim.SetInteger("transitions", 2);
+           rigd.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            anim.SetInteger("transitions", 3);
             isground = false;
-        }
+       }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -62,6 +64,7 @@ public class Player : MonoBehaviour
         {
             isground = true;
             anim.SetInteger("transitions", 0);
+            Debug.Log("esta no chão");
         }
     }
 
