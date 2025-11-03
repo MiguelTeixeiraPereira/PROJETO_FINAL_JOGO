@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //public Vector2 posicaoInicial;
-    //public GameManager gameManager;
+    public Vector2 posicaoInicial;
+    public GameManager gameManager;
 
     public Animator anim;
     private Rigidbody2D rigd;
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rigd = GetComponent<Rigidbody2D>();
-        //posicaoInicial = transform.position;
+        posicaoInicial = transform.position;
     }
 
 
@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isground == true)
         {
            rigd.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            anim.SetInteger("transitions", 3);
+            anim.SetInteger("transitions", 4);
             isground = false;
        }
     }
@@ -70,6 +70,6 @@ public class Player : MonoBehaviour
 
     public void Reiniciar_posicao()
     {
-        //transform.position = posicaoInicial;
+        transform.position = posicaoInicial;
     }
 }
