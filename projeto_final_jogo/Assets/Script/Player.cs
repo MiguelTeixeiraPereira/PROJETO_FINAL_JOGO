@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
    
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isground == true)
+        if (Input.GetKeyDown(KeyCode.W) && isground == true)
         {
            rigd.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             anim.SetInteger("transitions", 4);
