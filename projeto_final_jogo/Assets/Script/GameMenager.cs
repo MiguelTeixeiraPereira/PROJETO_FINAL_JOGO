@@ -18,18 +18,21 @@ public class GameManager : MonoBehaviour
             pontos = 0;
         }
 
-        TextPontos.text = "pontos: " + pontos;
+        TextPontos.text = "Pontos: " + pontos;
 
-        Debug.Log("pontos: " + pontos);
+        Debug.Log("Pontos: " + pontos);
 
 
     }
+
+    public TextMeshProUGUI Textvidas;
     public void PerderVida(int vida)
     {
         vidas -= vida;
-        Debug.Log("vidas" + vidas);
+        Debug.Log("PSidas" + vidas);
         GameObject player = GameObject.FindWithTag("Player");
         player.GetComponent<Player>().Reiniciar_posicao();
+        Textvidas.text = "Vidas: " + vidas;
 
         if (vidas == 0)
         {
@@ -38,5 +41,8 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    
+
+
 
 }
