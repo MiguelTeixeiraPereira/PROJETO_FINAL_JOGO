@@ -9,34 +9,29 @@ public class Menu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(1);
-
     }
 
-    public void IrMenu()
+    public void BackMenu()
     {
         SceneManager.LoadScene(0);
-
-
+    }
+    public void ActiveConfig(GameObject go)
+    {
+        go.SetActive(true);
+    }
+    public void DesativeConfig(GameObject go)
+    {
+        go.SetActive(false);
     }
 
-    public void ActiveConfig(GameObject Config)
+    public void ActivePause(GameObject go)
     {
-        Config.SetActive(true);
-    }
-
-    public void DisableConfig(GameObject Config)
-    {
-        Config.SetActive(false);
-    }
-
-    public void ActivePause(GameObject Pause)
-    {
-        Pause.SetActive(true);
         Time.timeScale = 0;
+        go.SetActive(true);
     }
-    public void DisablePause(GameObject Pause)
+    public void DisablePause(GameObject go)
     {
-        Pause.SetActive(false);
         Time.timeScale = 1;
+        go.SetActive(false);
     }
 }
