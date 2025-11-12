@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if (player == null || gameManager == null) return;
-        if (vidaAtual <= 0) return; 
+        if (vidaAtual <= 0) return;
 
         float distance = Vector2.Distance(transform.position, player.position);
 

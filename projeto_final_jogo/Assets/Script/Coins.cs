@@ -18,6 +18,8 @@ public class Coins : MonoBehaviour
     {
         if (colisao.CompareTag("Player"))
         {
+            PlayerAudio som = colisao.GetComponent<PlayerAudio>();
+            som.PlaySFX(som.coinSound);
             GameManager.AddPontos(10);
             Destroy(gameObject);
         }

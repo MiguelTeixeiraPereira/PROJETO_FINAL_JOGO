@@ -1,4 +1,6 @@
-using UnityEngine;
+ï»¿using UnityEngine;
+
+using UnityEngine.Audio;
 
 public class Player : MonoBehaviour
 
@@ -12,19 +14,27 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rigd;
 
+    private PlayerAudio playerAudio;
+
     public float speed;
 
     public float jumpForce = 5;
 
     public bool isground;
 
-    public Transform attackPoint;   // Posição da área de ataque
+    public Transform attackPoint;
 
-    public float attackRange = 0.8f; // Alcance curto
+    public float attackRange = 0.8f;
 
     public int danoAtaque = 15;
 
-    public LayerMask inimigoLayer; // Layer dos inimigos
+    public LayerMask inimigoLayer;
+
+    private bool isAttacking = false;
+
+    [Header("Sons do Player")]
+
+    public AudioClip attackSound;  // <-- SOM DE ATAQUE
 
     void Start()
 
@@ -36,15 +46,23 @@ public class Player : MonoBehaviour
 
         posicaoInicial = transform.position;
 
+        playerAudio = GetComponent<PlayerAudio>();
+
     }
 
     void Update()
 
     {
 
-        Move();
+        if (!isAttacking)
 
-        Jump();
+        {
+
+            Move();
+
+            Jump();
+
+        }
 
         Attack();
 
@@ -58,7 +76,9 @@ public class Player : MonoBehaviour
 
         rigd.linearVelocity = new Vector2(teclas * speed, rigd.linearVelocity.y);
 
-        if (teclas > 0 && isground == true)
+        if (isAttacking) return;
+
+        if (teclas > 0 && isground)
 
         {
 
@@ -68,7 +88,7 @@ public class Player : MonoBehaviour
 
         }
 
-        if (teclas < 0 && isground == true)
+        else if (teclas < 0 && isground)
 
         {
 
@@ -78,7 +98,7 @@ public class Player : MonoBehaviour
 
         }
 
-        if (teclas == 0 && isground == true)
+        else if (teclas == 0 && isground)
 
         {
 
@@ -92,7 +112,7 @@ public class Player : MonoBehaviour
 
     {
 
-        if (Input.GetKeyDown(KeyCode.W) && isground == true)
+        if (Input.GetKeyDown(KeyCode.W) && isground)
 
         {
 
@@ -102,6 +122,10 @@ public class Player : MonoBehaviour
 
             isground = false;
 
+            // Som de pulo
+
+            playerAudio.PlaySFX(playerAudio.jumpSound);
+
         }
 
     }
@@ -110,23 +134,49 @@ public class Player : MonoBehaviour
 
     {
 
-        if (Input.GetMouseButtonDown(1)) // clique direito
+        if (Input.GetMouseButtonDown(1) && isground && !isAttacking)
 
         {
 
-            anim.SetInteger("transitions", 2); // animação de ataque (adicione se quiser)
-
-            Collider2D[] inimigos = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, inimigoLayer);
-
-            foreach (Collider2D inimigo in inimigos)
-
-            {
-
-                inimigo.GetComponent<Enemy>().ReceberDano(danoAtaque);
-
-            }
+            StartCoroutine(Ataque());
 
         }
+
+    }
+
+    System.Collections.IEnumerator Ataque()
+
+    {
+
+        isAttacking = true;
+
+        anim.SetInteger("transitions", 2);
+
+        rigd.linearVelocity = Vector2.zero;
+
+        // ðŸ”Š Som de ataque
+
+        if (attackSound != null)
+
+            playerAudio.PlaySFX(attackSound);
+
+        // Dano nos inimigos prÃ³ximos
+
+        Collider2D[] inimigos = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, inimigoLayer);
+
+        foreach (Collider2D inimigo in inimigos)
+
+        {
+
+            inimigo.GetComponent<Enemy>().ReceberDano(danoAtaque);
+
+        }
+
+        yield return new WaitForSeconds(0.6f);
+
+        isAttacking = false;
+
+        anim.SetInteger("transitions", 0);
 
     }
 
@@ -140,7 +190,9 @@ public class Player : MonoBehaviour
 
             isground = true;
 
-            anim.SetInteger("transitions", 0);
+            if (!isAttacking)
+
+                anim.SetInteger("transitions", 0);
 
         }
 
@@ -153,8 +205,6 @@ public class Player : MonoBehaviour
         transform.position = posicaoInicial;
 
     }
-
-    // Gizmo para visualizar o alcance do ataque
 
     private void OnDrawGizmosSelected()
 
@@ -169,3 +219,4 @@ public class Player : MonoBehaviour
     }
 
 }
+

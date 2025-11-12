@@ -1,52 +1,22 @@
 fileFormatVersion: 2
-guid: 9f78b804d4b5fbd45b6991abfc4e7291
+guid: 0c71132f927826243a5b276a339a1047
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6854571939211833307
-    second: attackk_0
+      213: 5041422717479560517
+    second: EnemyThree_0
   - first:
-      213: -6471094480163571536
-    second: attackk_1
+      213: 5848856210948443521
+    second: EnemyThree_1
   - first:
-      213: 8630793611440934781
-    second: attackk_2
+      213: -5825585175483789811
+    second: EnemyThree_2
   - first:
-      213: 998416443478515836
-    second: attackk_3
+      213: -1828652668998844627
+    second: EnemyThree_3
   - first:
-      213: 8847537537855176675
-    second: attackk_4
-  - first:
-      213: -5951068101220850951
-    second: attackk_5
-  - first:
-      213: 8780782162371153568
-    second: attackk_6
-  - first:
-      213: 1179577636370564327
-    second: attackk_7
-  - first:
-      213: -3264066373680973850
-    second: attackk_8
-  - first:
-      213: -6771221584004193721
-    second: attackk_9
-  - first:
-      213: 2423157726780968214
-    second: attackk_10
-  - first:
-      213: -942060267711692746
-    second: attackk_11
-  - first:
-      213: 3778192523182677409
-    second: attackk_12
-  - first:
-      213: -6592280816593314816
-    second: attackk_13
-  - first:
-      213: 9037699164337643533
-    second: attackk_14
+      213: -1276230783996551105
+    second: EnemyThree_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -142,177 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attackk_0
+      name: EnemyThree_0
       rect:
         serializedVersion: 2
-        x: 433
-        y: 154
+        x: 371
+        y: 743
         width: 1025
-        height: 1521
+        height: 777
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bdfe4149cd4502f50800000000000000
-      internalID: 6854571939211833307
+      spriteID: 54524fd304bb6f540800000000000000
+      internalID: 5041422717479560517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attackk_1
+      name: EnemyThree_1
       rect:
         serializedVersion: 2
-        x: 2417
-        y: 154
+        x: 2324
+        y: 743
+        width: 1087
+        height: 777
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d4beb3cbf4b2150800000000000000
+      internalID: 5848856210948443521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyThree_2
+      rect:
+        serializedVersion: 2
+        x: 4277
+        y: 743
         width: 1149
-        height: 1490
+        height: 777
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b8fbd90bdd0236a0800000000000000
-      internalID: -6471094480163571536
+      spriteID: d0ec18ee52d572fa0800000000000000
+      internalID: -5825585175483789811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attackk_2
+      name: EnemyThree_3
       rect:
         serializedVersion: 2
-        x: 4401
-        y: 154
-        width: 1118
-        height: 1552
+        x: 6447
+        y: 743
+        width: 808
+        height: 870
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7fc5abcf0db6c770800000000000000
-      internalID: 8630793611440934781
+      spriteID: d2ff0ce06125f96e0800000000000000
+      internalID: -1828652668998844627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attackk_3
+      name: EnemyThree_4
       rect:
         serializedVersion: 2
-        x: 6385
-        y: 154
-        width: 1366
-        height: 1552
+        x: 8338
+        y: 743
+        width: 963
+        height: 777
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c70227b27761bdd00800000000000000
-      internalID: 998416443478515836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attackk_4
-      rect:
-        serializedVersion: 2
-        x: 8369
-        y: 154
-        width: 1552
-        height: 1521
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3efbac0b384c8ca70800000000000000
-      internalID: 8847537537855176675
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attackk_5
-      rect:
-        serializedVersion: 2
-        x: 10353
-        y: 154
-        width: 1511
-        height: 1521
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9f2a290971f896da0800000000000000
-      internalID: -5951068101220850951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attackk_8
-      rect:
-        serializedVersion: 2
-        x: 12337
-        y: 154
-        width: 1455
-        height: 1521
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6e7b2794de4b3b2d0800000000000000
-      internalID: -3264066373680973850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attackk_9
-      rect:
-        serializedVersion: 2
-        x: 14321
-        y: 154
-        width: 1231
-        height: 1521
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 742e8f548d9c702a0800000000000000
-      internalID: -6771221584004193721
+      spriteID: f30a77c1ddae94ee0800000000000000
+      internalID: -1276230783996551105
       vertices: []
       indices: 
       edges: []
@@ -321,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fc6921e414a6caf40a575a4266540403
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -331,21 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      attackk_0: 6854571939211833307
-      attackk_1: -6471094480163571536
-      attackk_10: 2423157726780968214
-      attackk_11: -942060267711692746
-      attackk_12: 3778192523182677409
-      attackk_13: -6592280816593314816
-      attackk_14: 9037699164337643533
-      attackk_2: 8630793611440934781
-      attackk_3: 998416443478515836
-      attackk_4: 8847537537855176675
-      attackk_5: -5951068101220850951
-      attackk_6: 8780782162371153568
-      attackk_7: 1179577636370564327
-      attackk_8: -3264066373680973850
-      attackk_9: -6771221584004193721
+      EnemyThree_0: 5041422717479560517
+      EnemyThree_1: 5848856210948443521
+      EnemyThree_2: -5825585175483789811
+      EnemyThree_3: -1828652668998844627
+      EnemyThree_4: -1276230783996551105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
