@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -116,12 +116,11 @@ public class Enemy : MonoBehaviour
     {
         anim.SetInteger("transitions", 0);
         Debug.Log("Inimigo morreu!");
-        // Desativar colis„o e fÌsica
+        // Desativar colis√£o e f√≠sica
         rb.linearVelocity = Vector2.zero;
-        rb.isKinematic = true;
         GetComponent<Collider2D>().enabled = false;
-
-        // Pode adicionar animaÁ„o de morte aqui, se quiser
+        GameManager.instance.InimigoMorto();  // ‚Üê avisa o GameManager
+        // Pode adicionar anima√ß√£o de morte aqui, se quiser
         Destroy(gameObject, 1.2f);
     }
 
